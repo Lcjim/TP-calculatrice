@@ -20,7 +20,7 @@ int main(){
                "addition= +, soustraction = -, multiplication = * , division = / \n"
                ", puissance = ^ , racine carrée = s, et pourcentage = %.\n");
         scanf("%c",&nature);
-        if (nature== '+'){
+        if (nature== '+'){                              /* on mets + comme nature pour faire la somme du premier nombre et le second */
             printf(" choisir le premier nombre.\n");
             scanf("%d",&number1);
             getchar();
@@ -28,10 +28,9 @@ int main(){
             scanf("%d",&number2);
             getchar();
             calcul=number1 + number2;
-
             printf("le résultat de %d + %d est: %d  \n",number1,number2, calcul);
 
-        }else if (nature== '-'){
+        }else if (nature== '-'){                           /* on mets - comme nature pour faire la différence du premier nombre et le second */
             printf(" choisir le premier nombre.\n");
             scanf("%d",&number1);
             getchar();
@@ -41,7 +40,7 @@ int main(){
             calcul=number1 - number2;
             printf("le résultat de %d - %d est: %d  \n",number1,number2, calcul);
 
-        }else if (nature== '*') {
+        }else if (nature== '*') {                       /* on mets * comme nature pour faire la multiplication du premier nombre et le second */
             printf(" choisir le premier nombre.\n");
             scanf("%d", &number1);
             getchar();
@@ -50,11 +49,11 @@ int main(){
             getchar();
             calcul = number1 * number2;
             printf("le résultat de %d x %d est: %d \n", number1, number2, calcul);
-            if (number1 ||number2 == 0) {
+            if (number1 ||number2 == 0) {          /* si le premier nombre et le second est 0,erreur car il suit les règles mathématique */
                 printf("Erreur de cacul!\n,on peut multiplier par zero");
 
             }
-        }else if (nature=='/'){
+        }else if (nature=='/'){        /* on mets / comme nature pour faire division du premier nombre et le second */
             printf(" choisir le premier nombre.\n");
             scanf("%d",&number1);
             getchar();
@@ -62,12 +61,12 @@ int main(){
             scanf("%d",&number2);
             getchar();
 
-            if (number1 && number2 != 0) {
+            if (number1 && number2 != 0) {       /* fair l'opération du premier nombre et le second sauf si les un des deux c'est un 0 car sinon erreur mathématique*/
                 calcul = number1 / number2;
                 printf("Le résultat de %d / %d est : %d\n", number1, number2, calcul);
             } else {
                 printf("Erreur de calcul ! On ne peut pas diviser par zéro.\n");
-            }break;
+            }
         }else if (nature == '^'){
             printf(" choisir le premier nombre sera la base.\n");
             scanf("%d",&number1);
